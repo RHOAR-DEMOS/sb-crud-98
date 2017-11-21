@@ -84,9 +84,8 @@ public class FruitController {
     public Fruit put(@PathVariable("id") Integer id, @RequestBody(required = false) Fruit fruit) {
         verifyFruitExists(id);
         verifyCorrectPayload(fruit);
-
-        fruit.setName("UPDATED: "+fruit.getName());
         fruit.setId(id);
+        fruit.setUpdated(true);
         return repository.save(fruit);
     }
 

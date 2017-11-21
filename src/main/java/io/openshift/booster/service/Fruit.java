@@ -30,6 +30,8 @@ public class Fruit {
 
     private String name;
 
+    private boolean updated=false;
+
     public Fruit() {
     }
 
@@ -52,4 +54,18 @@ public class Fruit {
     public void setName(String name) {
         this.name = name;
     }
+
+	/**
+	 * @return the updated
+	 */
+	public boolean isUpdated() {
+		return updated;
+	}
+
+	/**
+	 * @param updated the updated to set
+	 */
+	public void setUpdated(boolean updated) {
+		this.updated = updated;
+	}
 }
