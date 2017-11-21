@@ -85,6 +85,7 @@ public class FruitController {
         verifyFruitExists(id);
         verifyCorrectPayload(fruit);
 
+        fruit.setName("UPDATED: "+fruit.getName());
         fruit.setId(id);
         return repository.save(fruit);
     }
